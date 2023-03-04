@@ -1,19 +1,31 @@
 import React from 'react';
 import './css/styles.css';
+import Usuarios from './components/Usuarios';
+import Footer from './components/Footer';
+import Boton from './components/Boton';
+import Boton2 from './components/Boton2';
 
 const App = () => {
   // Constantes y funciones de JS
+  const sesion = false;
 
-  const nombre = 'Oswaldo Alonzo';
-  const saludo = 'Curso de React - INTECAP';
   return (
     //Render o lo que se muestra en pantalla.
-    <div>
-      <h1 className='titulo'>
-        {saludo} 
-      </h1>
-      <p className='titulo'>{nombre}</p>
-    </div>
+    <>
+      {sesion ? (
+        <>
+          <Usuarios />
+          <Footer />
+        </>
+      ) : (
+        <>
+          <h1 className='titulo'>Debes iniciar Sesión</h1>
+          <Boton />
+          <Boton2 />
+          <Footer />
+        </>
+      )}
+    </>
   );
 };
 
