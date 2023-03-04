@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './css/styles.css';
 
-function App() {
+const App = () => {
+  // Constantes y funciones de JS
+
+  const nombre = 'Oswaldo Alonzo';
+  const saludo = 'Curso de React - INTECAP';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    //Render o lo que se muestra en pantalla.
+    <div>
+      <h1 className='titulo'>
+        {saludo} 
+      </h1>
+      <p className='titulo'>{nombre}</p>
     </div>
   );
-}
+};
 
 export default App;
