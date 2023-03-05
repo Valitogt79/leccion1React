@@ -4,7 +4,7 @@ import Usuarios from './components/Usuarios';
 import Footer from './components/Footer';
 import Boton from './components/Boton';
 import Boton2 from './components/Boton2';
-import formularioSesion from './components/formularioSesion';
+import FormularioSesion from './components/FormularioSesion';
 
 const App = () => {
   // Constantes y funciones de JS
@@ -13,7 +13,7 @@ const App = () => {
   return (
     //Render o lo que se muestra en pantalla.
     <>
-      <formularioSesion setSesion={setSesion} />
+      <FormularioSesion setSesion={setSesion} />
 
       {setSesion ? (
         <>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const formularioSesion = ({ setSesion }) => {
+const FormularioSesion = ({ setSesion }) => {
   //Recibimos la funcion SetSesison
   const [usuario, setUsuario] = useState(''); //inicializamos el estado
   const [password, setPassword] = useState(''); //inicializamos el estado
@@ -10,7 +10,7 @@ const formularioSesion = ({ setSesion }) => {
       setUsuario(e.target.value);
     } else if (e.target.name === 'password') {
       setPassword(e.target.value);
-    } 
+    }
   };
 
   const onSubmit = (e) => {
@@ -37,7 +37,7 @@ const formularioSesion = ({ setSesion }) => {
             type='text'
             id='usuario'
             name='usuario'
-            placeholder='Usuario'
+            placeholder='Ingrese su Usuario'
             value={usuario}
             onChange={onChange}
           />
@@ -48,15 +48,15 @@ const formularioSesion = ({ setSesion }) => {
             type='password'
             id='password'
             name='password'
-            placeholder='password'
+            placeholder='Ingrese su Contraseña'
             value={password}
             onChange={onChange}
           />
         </div>
-        <button type='submit'></button>
+        <button type='submit'>Iniciar Sesión</button>
       </form>
     </>
   );
 };
 
-export default formularioSesion;
+export default FormularioSesion;
