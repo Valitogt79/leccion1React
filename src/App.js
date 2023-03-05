@@ -4,15 +4,18 @@ import Usuarios from './components/Usuarios';
 import Footer from './components/Footer';
 import Boton from './components/Boton';
 import Boton2 from './components/Boton2';
+import formularioSesion from './components/formularioSesion';
 
 const App = () => {
   // Constantes y funciones de JS
-  const sesion = false;
+  const setSesion = true;
 
   return (
     //Render o lo que se muestra en pantalla.
     <>
-      {sesion ? (
+      <formularioSesion setSesion={setSesion} />
+
+      {setSesion ? (
         <>
           <Usuarios />
           <Footer />
